@@ -1,148 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LYXXZY2WP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-7LYXXZY2WP');
-    </script>
-    <title>Contact - Nadège Rouelle</title>
-    <meta name="keywords"
-        content="developpement d\'applications logistique, developpement d\'applications santé, 
-        developpement d\'applications dans l'industrie, dotnet, C#, application Blazor, 
-        Rouelle Consulting, MAUI, .Net MAUI, iOS, Android, CI, continuous integration, continuous deployment
-        azure pipelines, audit logiciel, audit applications, developpement lyon, 
-        freelance lyon, freelance rhone alpes, developpeur rhone alpes, developpement MAUI Lyon" />
-    <meta name="description"
-        content="Rouelle Consulting, votre partenaire pour le développement d'applications" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        header {
-            background-color: #3498db;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-        }
-        nav ul {
-            padding: 0;
-            list-style: none;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .hero {
-            background: linear-gradient(135deg, #3498db, #2c3e50);
-            color: white;
-            text-align: center;
-            padding: 5rem 1rem;
-        }
-        .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-        }
-        .section {
-            padding: 3rem 1rem;
-            max-width: 800px;
-            min-height: 600px;;
-            margin: auto;
-            text-align: center;
-        }
-        .section h2 {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 2rem;
-            color: #2c3e50;
-        }
-        .btn {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-        .btn:hover {
-            background-color: #c0392b;
-        }
-        
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        
-        footer nav ul a {
-            margin: 1rem;
-        }
-
-        img.social-icon {
-            width: 30px;
-            height: 30px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Développeuse .NET Freelance</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-<body>
-     <header>
-        <!-- <div class="logo">Mon Logo</div> -->
-        <nav>
-            <ul>
-                <li><a href="./index.html">Accueil</a></li>
-                <li><a href="./apropos.html">À Propos</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="section">
-        <h2>Contactez-moi</h2>
-        <p>Si vous avez des questions ou souhaitez discuter d'un projet, n'hésitez pas à me contacter par e-mail ou à planifier un rendez-vous.</p>
-<br />
-        <a href="mailto:contact@rouelleconsulting.fr" class="btn">Envoyer un e-mail</a>
-        <a href="https://calendly.com/rouelleconsulting/15-min-call" class="btn">Planifier un rendez-vous</a>
+<body class="bg-white text-gray-800 font-sans">
 
-    </section>
-    <footer id="contact">
-        <p>Contactez-moi à l'adresse contact[at]rouelleconsulting.fr</p>
-        <p>Suivez-moi sur les réseaux sociaux</p>
-        <nav>
-            <ul>
-                <a href="https://github.com/nrouelle" target="_blank" rel="noopener noreferrer">
-                    <img src="./images/github.svg" alt="GitHub" class="social-icon" />
-                </a>
-                <a href="https://www.linkedin.com/in/nadège-rouelle" target="_blank">
-                    <img src="./images/linkedin.svg" alt="LinkedIn" class="social-icon" />
-                </a>
-                <a href="https://calendly.com/rouelleconsulting/15-min-call" target="_blank">
-                    <img src="./images/calendar.svg" alt="Calendar" class="social-icon" />
-                </a>
-            </ul>
-        </nav>
-    </footer>
+  <!-- Barre de navigation -->
+  <nav class="bg-white border-b border-gray-200 px-6 py-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="text-xl font-bold text-blue-700">Rouelle Consulting</div>
+      <div class="space-x-6 text-sm font-medium">
+        <a href="./index.html" class="text-gray-700 hover:text-blue-600">Accueil</a>
+        <a href="./services.html" class="text-gray-700 hover:text-blue-600">Services</a>
+        <a href="./realisations.html" class="text-gray-700 font-semibold">Réalisations</a>
+        <a href="./contact.html" class="text-blue-600 hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-gray-100 py-12 px-6 text-center">
+    <h1 class="text-4xl font-bold mb-4">Contactez-moi</h1>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Vous avez un projet ou une question ? Utilisez ce formulaire ou prenez rendez-vous avec moi pour discuter de votre projet.
+    </p>
+  </header>
+
+  <!-- Formulaire de contact -->
+  <main class="max-w-xl mx-auto px-6 py-12">
+    <form action="mailto:contact@rouelleconsulting.com" method="POST" enctype="text/plain" class="space-y-6">
+      <div>
+        <label for="name" class="block font-semibold mb-1">Nom complet</label>
+        <input type="text" id="name" name="Nom" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+      </div>
+      <div>
+        <label for="email" class="block font-semibold mb-1">Email</label>
+        <input type="email" id="email" name="Email" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+      </div>
+      <div>
+        <label for="message" class="block font-semibold mb-1">Message</label>
+        <textarea id="message" name="Message" rows="5" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+      </div>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+        Envoyer
+      </button>
+    </form>
+
+    <div class="text-center mt-12">
+      <p class="mb-4 text-gray-700">Ou utilisez ce formulaire externe :</p>
+      <a href="https://cal.com/rouelleconsulting/30min?overlayCalendar=true" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+      Prendre rendez-vous
+    </a>
+    </div>
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 py-6">
+    © 2025 Nadège Rouelle – Développeuse .NET Freelance
+  </footer>
+
 </body>
 </html>
