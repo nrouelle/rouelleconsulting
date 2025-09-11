@@ -12,7 +12,7 @@
 
         gtag('config', 'G-7LYXXZY2WP');
     </script>
-    <title>À Propos - Nadège Rouelle</title>
+    <title>À Propos - Nadège Rouelle, Développeuse .NET Freelance</title>
     <meta name="keywords"
         content="developpement d\'applications logistique, developpement d\'applications santé, 
         developpement d\'applications dans l'industrie, dotnet, C#, application Blazor, 
@@ -21,128 +21,192 @@
         freelance lyon, freelance rhone alpes, developpeur rhone alpes, developpement MAUI Lyon" />
     <meta name="description"
         content="Nadège Rouelle, développeuse .NET freelance avec +20 ans d'expérience. Parcours, expertise technique et approche humaine dans le développement d'applications." />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        header {
-            background-color: #3498db;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-        }
-        nav ul {
-            padding: 0;
-            list-style: none;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .hero {
-            background: linear-gradient(135deg, #3498db, #2c3e50);
-            color: white;
-            text-align: center;
-            padding: 5rem 1rem;
-        }
-        .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-        }
-        .section {
-            padding: 3rem 1rem;
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-        }
-        .section h2 {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 2rem;
-            color: #2c3e50;
-        }
-        .btn {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-        .btn:hover {
-            background-color: #c0392b;
-        }
-        
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        footer nav ul a {
-            margin: 1rem;
-        }
-
-        img.social-icon {
-            width: 30px;
-            height: 30px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-     <header>
-        <!-- <div class="logo">Mon Logo</div> -->
-        <nav>
-            <ul>
-                <li><a href="./index.html">Accueil</a></li>
-                <li><a href="./apropos.html">À Propos</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="section">
-        <h2>À Propos de Moi</h2>
-        <p>Développeuse .Net depuis plus de 20 ans, dont 9 ans en tant que freelance, j'ai une solide expérience dans le développement d'applications web, mobile et cloud, ainsi que dans la formation des équipes sur les outils et les bonnes pratiques.</p>
-        <p>Que ce soit pour des outils internes ou à destination de vos clients, je peux vous accompagner dans leur réalisation, depuis le recueil de vos besoins jusqu'au déploiement en production.</p>
-        <p>Je peux accompagner vos équipes, que ce soit par le biais d'audit de code ou par l'accompagnement à la mise en place de méthodologie de travail ou encore par la formation.</p>
-        <p>Habituée à travailler pour des grands groupes comme des PME, j'ai l'habitude de travailler en équipe ou seule et le tout en parfaite autonomie. J'ai l'habitude de faire des points réguliers, voire quotidien, sur l'avancement des projets qui me sont confiés.</p>
-        <p>Si vous souhaitez échanger avec moi sur vos projets, n'hésitez pas à venir en discuter autour d'un café virtuel.</p>
-        <a href="https://cal.com/rouelleconsulting/30min?overlayCalendar=true" class="btn">Prendre rendez-vous</a>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Barre de navigation -->
+  <nav class="bg-white border-b border-gray-200 px-6 py-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="text-xl font-bold text-blue-700">Rouelle Consulting</div>
+      <div class="space-x-6 text-sm font-medium">
+        <a href="./index.html" class="text-gray-700 hover:text-blue-600">Accueil</a>
+        <a href="./services.html" class="text-gray-700 hover:text-blue-600">Services</a>
+        <a href="./realisations.html" class="text-gray-700 hover:text-blue-600">Réalisations</a>
+        <a href="./apropos.html" class="text-blue-600 hover:text-blue-600">À propos</a>
+        <a href="./contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+        <a href="./mentions-legales.html" class="text-gray-700 hover:text-blue-600">Mentions légales</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <nav class="bg-gray-50 px-6 py-3">
+    <div class="max-w-6xl mx-auto">
+      <ol class="flex items-center space-x-2 text-sm text-gray-600">
+        <li>
+          <a href="./index.html" class="hover:text-blue-600">Accueil</a>
+        </li>
+        <li>
+          <span class="mx-2">/</span>
+          <span class="text-gray-800 font-medium">À propos</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-gray-100 py-12 px-6 text-center">
+    <h1 class="text-4xl font-bold mb-4">À propos de Nadège Rouelle</h1>
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+      Développeuse .NET freelance passionnée avec plus de 20 ans d'expérience
+    </p>
+  </header>
+
+  <!-- Contenu principal -->
+  <section class="max-w-4xl mx-auto py-16 px-6">
+    <div class="md:flex gap-10 mb-16">
+      <div class="w-full md:w-1/2 mb-8 md:mb-0">
+        <img class="rounded-lg shadow-lg w-full" src="./images/portrait-face.jpg" alt="Nadège Rouelle, développeuse .NET freelance" />
+      </div>
+      <div class="w-full md:w-1/2">
+        <h2 class="text-2xl font-bold mb-6">Mon parcours</h2>
+        
+        <p class="mb-4 text-gray-700">
+          Chaque entreprise fait face à des défis uniques lorsqu'il s'agit de son système informatique. 
+          Vous avez peut-être une application vieillissante difficile à maintenir, un logiciel sur-mesure à créer 
+          ou encore besoin de fiabiliser vos données.
+        </p>
+        
+        <p class="mb-4 text-gray-700">
+          En tant que développeuse .NET freelance, j'accompagne mes clients dans la conception, l'évolution et 
+          la maintenance d'applications qui répondent concrètement à leurs besoins métiers.
+        </p>
+        
+        <p class="mb-6 text-gray-700">
+          Forte de plus de 20 ans d'expérience dans le développement d'applications, j'ai travaillé dans 
+          différents secteurs : logistique, santé, assurance, industrie. Cette diversité m'a permis de 
+          développer une approche pragmatique et adaptée aux contraintes réelles des entreprises.
+        </p>
+
+        <div class="bg-blue-50 p-4 rounded-lg">
+          <h3 class="font-semibold text-blue-700 mb-2">Mes valeurs</h3>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li>• <strong>Transparence :</strong> Communication claire sur l'avancement et les défis</li>
+            <li>• <strong>Qualité :</strong> Code maintenable et solutions pérennes</li>
+            <li>• <strong>Proximité :</strong> Accompagnement personnalisé et réactif</li>
+            <li>• <strong>Pragmatisme :</strong> Solutions adaptées à vos contraintes réelles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expertise technique -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6">Expertise technique</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-blue-700">Technologies principales</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• .NET Core / .NET 5/6/7/8</li>
+            <li>• C# (depuis .NET Framework 2.0)</li>
+            <li>• ASP.NET Core MVC</li>
+            <li>• Blazor Server & WebAssembly</li>
+            <li>• Entity Framework Core</li>
+            <li>• Web API RESTful</li>
+            <li>• .NET MAUI (applications mobiles)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-blue-700">Environnement de développement</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• SQL Server, PostgreSQL, MySQL</li>
+            <li>• Azure DevOps, GitHub Actions</li>
+            <li>• Docker, conteneurisation</li>
+            <li>• Tests unitaires et d'intégration</li>
+            <li>• Architecture DDD, Clean Architecture</li>
+            <li>• Méthodologies Agiles</li>
+            <li>• CI/CD, déploiement continu</li>
+          </ul>
+        </div>
+      </div>
     </section>
-    <footer id="contact">
-        <p>Contactez-moi à l'adresse contact[at]rouelleconsulting.fr</p>
-        <p>Suivez-moi sur les réseaux sociaux</p>
-        <nav>
-            <ul>
-                <a href="https://github.com/@(property.GitHub)" target="_blank" rel="noopener noreferrer">
-                    <img src="./images/github.svg" alt="GitHub" class="social-icon" />
-                </a>
-                <a href="https://www.linkedin.com/in/nadège-rouelle" target="_blank">
-                    <img src="./images/linkedin.svg" alt="LinkedIn" class="social-icon" />
-                </a>
-                <a href="https://cal.com/rouelleconsulting/30-min-call" target="_blank">
-                    <img src="./images/calendar.svg" alt="Calendar" class="social-icon" />
-                </a>
+
+    <!-- Secteurs d'activité -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6">Secteurs d'expérience</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 border rounded-lg shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-green-600">🏥 Santé & E-santé</h3>
+          <p class="text-gray-700 text-sm">Applications de gestion médicale, télémédecine, conformité RGPD santé</p>
+        </div>
+        <div class="bg-white p-6 border rounded-lg shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-orange-600">📦 Logistique & Transport</h3>
+          <p class="text-gray-700 text-sm">Suivi de colis, gestion d'entrepôts, optimisation des flux</p>
+        </div>
+        <div class="bg-white p-6 border rounded-lg shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">🛡️ Assurance & Finance</h3>
+          <p class="text-gray-700 text-sm">APIs de souscription, gestion de contrats, intégrations bancaires</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approche de travail -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6">Mon approche</h2>
+      <div class="bg-gray-50 p-8 rounded-lg">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4 text-blue-700">🔧 Pour les projets de maintenance</h3>
+            <p class="text-gray-700 mb-3">
+              J'interviens rapidement pour stabiliser et faire évoluer vos applications existantes.
+            </p>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>• Diagnostic et documentation de l'existant</li>
+              <li>• Correction des bugs critiques en priorité</li>
+              <li>• Modernisation progressive du code</li>
+              <li>• Amélioration des performances</li>
             </ul>
-        </nav>
-    </footer>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4 text-blue-700">🚧 Pour les nouveaux projets</h3>
+            <p class="text-gray-700 mb-3">
+              Livraison rapide d'un MVP, puis développement itératif selon vos retours.
+            </p>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>• Analyse fonctionnelle collaborative</li>
+              <li>• Prototypage rapide</li>
+              <li>• Développement en cycles courts</li>
+              <li>• Tests et feedback continus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="text-center">
+      <h2 class="text-2xl font-bold mb-4">Travaillons ensemble</h2>
+      <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
+        Vous avez un projet de développement ou de maintenance d'application .NET ? 
+        Discutons de vos besoins et voyons comment je peux vous aider.
+      </p>
+      <div class="space-x-4">
+        <a href="./contact.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+          Me contacter
+        </a>
+        <a href="https://cal.com/rouelleconsulting/30min?overlayCalendar=true" target="_blank" class="inline-block bg-gray-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition">
+          Prendre rendez-vous
+        </a>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6">
+    © 2025 Nadège Rouelle – Développeuse .NET Freelance
+  </footer>
+
 </body>
 </html>
