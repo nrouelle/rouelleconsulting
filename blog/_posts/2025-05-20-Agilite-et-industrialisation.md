@@ -1,11 +1,8 @@
 ---
+layout: post
 title: Quand l’agilité rencontre l’industrialisation
-description: " structurer l’industrialisation des livrables, afin de fluidifier la création de packages et leur distribution.."
 date: 2025-05-20
-category: Industrialisation
-tags: ["Industrialisation", "GestionProjet", "Architecture", "Performance"]
-keywords: "blazor server, blazor webassembly, architecture .NET, développement web"
-author: "Nadège Rouelle"
+author: Nadège Rouelle
 ---
 
 # Introduction

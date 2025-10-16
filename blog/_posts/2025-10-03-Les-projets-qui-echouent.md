@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Les projets qui échouent"
+title: Les projets qui échouent
 date: 2025-10-03
 author: Nadège Rouelle - Rouelle Consulting
 ---
