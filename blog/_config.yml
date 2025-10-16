@@ -1,0 +1,20 @@
+# Configuration du site
+title: Mon Blog
+description: Mes réflexions et articles LinkedIn
+author: Nadège Rouelle
+email: nadege[at]rouelleconsulting.fr
+
+# IMPORTANT : baseurl pour le sous-dossier
+baseurl: /blog
+url: https://nrouelle.github.io
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+theme: minima
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
