@@ -59,3 +59,4 @@ pids
 # Blog generated files (optional - uncomment if you want to exclude generated HTML)
 # blog/*.html
 # blog/index.html
+blog_old/
