@@ -6,7 +6,7 @@ email: nadege[at]rouelleconsulting.fr
 
 # IMPORTANT : baseurl pour le sous-dossier
 baseurl: /blog
-url: https://nrouelle.github.io
+url: https://www.rouelleconsulting.fr
 # Force HTTPS pour tous les assets
 enforce_ssl: nrouelle.github.io
 
