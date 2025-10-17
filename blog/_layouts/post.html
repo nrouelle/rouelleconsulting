@@ -4,13 +4,13 @@ layout: default
 
 <article class="post">
   <header class="post-header">
-    <h1>{{ page.title }}</h1>
+    <h1>{{ post.title }}</h1>
     <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%d %B %Y" }}
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%d %B %Y" }}
       </time>
-      {% if page.author %}
-      • <span>Par {{ page.author }}</span>
+      {% if post.author %}
+      • <span>Par {{ post.author }}</span>
       {% endif %}
     </p>
   </header>
