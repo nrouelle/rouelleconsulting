@@ -56,7 +56,13 @@ pids
 # Yarn Integrity file
 .yarn-integrity
 
-# Blog generated files (optional - uncomment if you want to exclude generated HTML)
-# blog/*.html
-# blog/index.html
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
+# Blog old files
 blog_old/
+blog-index.html

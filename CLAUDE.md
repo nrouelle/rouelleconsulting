@@ -4,44 +4,74 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static website for Rouelle Consulting, a .NET development freelance business. The site is built with pure HTML and Tailwind CSS, deployed to GitHub Pages.
+This is a hybrid website for Rouelle Consulting, a .NET development freelance business. The site combines:
+- **Static HTML pages** for the main professional site (built with pure HTML and Tailwind CSS)
+- **Jekyll blog** for technical articles and posts
 
 ## Architecture
 
-- **Static HTML website**: No build process required - pure HTML, CSS, and minimal JavaScript
-- **Styling**: Uses Tailwind CSS via CDN (version 2.2.19)
+- **Static HTML website**: Pure HTML, CSS, and minimal JavaScript for main site pages
+- **Jekyll blog**: Static site generator for blog posts at `/blog/`
+- **Styling**:
+  - Main site: Tailwind CSS via CDN (version 2.2.19)
+  - Blog: Custom CSS (blog-style.css)
 - **Analytics**: Google Analytics (gtag.js) integrated across all pages
 - **SEO**: Structured data (JSON-LD) with organization and service markup
-- **Deployment**: Automated via GitHub Actions workflow to GitHub Pages
+- **Deployment**: Automated via GitHub Actions workflow to GitHub Pages with Jekyll build
 
 ## File Structure
 
+### Root Level
+- `_config.yml` - Jekyll configuration (at root)
+- `_layouts/` - Jekyll layout templates
+- `_posts/` - Blog posts in Markdown format
+- `blog/` - Blog index page
+- `blog-style.css` - Blog-specific styles
+- `Gemfile` - Ruby dependencies for Jekyll
+
+### Static Site Pages
 - `index.html` - Main landing page
 - `services.html` - Services overview
 - `services-entreprises.html` - Enterprise services
 - `renfort-technique.html` - Technical reinforcement services
 - `realisations.html` - Portfolio/case studies
-- `cas-*.html` - Detailed case studies (API insurance, e-health, logistics)
+- `cas-*.html` - Detailed case studies
+- `service-*.html` - Individual service pages
 - `apropos.html` - About page
 - `contact.html` - Contact information
 - `mentions-legales.html` - Legal notices
+
+### Assets
 - `images/` - Static assets (SVG icons, portraits)
 - `CNAME` - Custom domain configuration
 
 ## Development Commands
 
-Since this is a static site, there are no build commands. Simply edit HTML files directly.
+### For Static Pages
+Simply edit HTML files directly. For local development:
+- Use a simple HTTP server like `python -m http.server` or VS Code Live Server
 
-For local development:
-- Open HTML files directly in browser
-- Use a simple HTTP server like `python -m http.server` or VS Code Live Server extension
+### For Jekyll Blog
+```bash
+# Install dependencies
+bundle install
+
+# Run Jekyll locally
+bundle exec jekyll serve
+
+# View at http://localhost:4000
+```
+
+### Creating Blog Posts
+Create new posts in `_posts/` with filename format: `YYYY-MM-DD-title.md`
 
 ## Deployment
 
-Deployment is automatic via GitHub Actions (`.github/workflows/static.yml`):
+Deployment is automatic via GitHub Actions (`.github/workflows/jekyll.yml`):
 - Triggers on push to main branch
-- Deploys entire repository to GitHub Pages
-- No build step required
+- Builds Jekyll site (includes static pages and blog)
+- Deploys to GitHub Pages
+- Static HTML pages are preserved as-is by Jekyll configuration
 
 ## Content Guidelines
 

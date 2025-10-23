@@ -1,0 +1,58 @@
+# Configuration du site
+title: Rouelle Consulting - Blog
+description: Blog technique sur le développement .NET et l'architecture logicielle
+author: Nadège Rouelle
+email: nadege[at]rouelleconsulting.fr
+
+# URL settings - Jekyll à la racine
+baseurl: ""
+url: https://www.rouelleconsulting.fr
+enforce_ssl: nrouelle.github.io
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude static site files from Jekyll processing
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - README-blog.md
+  - CLAUDE.md
+  - blog_old
+
+# Keep static HTML files as-is
+include:
+  - index.html
+  - services.html
+  - services-entreprises.html
+  - renfort-technique.html
+  - realisations.html
+  - apropos.html
+  - contact.html
+  - mentions-legales.html
+  - cas-api-assurance.html
+  - cas-esante.html
+  - cas-logistique.html
+  - service-api.html
+  - service-architecture.html
+  - service-blazor.html
+  - service-maintenance.html
+  - service-migration.html
+  - services1.html
+  - robots.txt
+  - sitemap.xml
+  - CNAME
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

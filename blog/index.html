@@ -1,32 +1,22 @@
 ---
 layout: default
-title: Accueil
+title: Blog
 ---
 
 <div class="home">
-  <h1>Bienvenue sur mon blog</h1>
-  <p class="intro">Retrouvez ici tous mes articles et réflexions.</p>
+  <h1 class="page-heading">Articles du Blog</h1>
 
-  <h2>Derniers articles</h2>
-  
-  <div class="posts-list">
+  <ul class="post-list">
     {% for post in site.posts %}
-      <article class="post-preview">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p class="post-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">
-            {{ post.date | date: "%d %B %Y" }}
-          </time>
-        </p>
-        <div class="post-excerpt">
-          {{ post.excerpt | strip_html | truncatewords: 50 }}
-        </div>
-        <a href="{{ post.url | relative_url }}" class="read-more">Lire la suite →</a>
-      </article>
+      <li>
+        <span class="post-meta">{{ post.date | date: "%d %B %Y" }}</span>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        {% if post.excerpt %}
+          <p>{{ post.excerpt }}</p>
+        {% endif %}
+      </li>
     {% endfor %}
-  </div>
-
-  {% if site.posts.size == 0 %}
-  <p class="no-posts">Aucun article pour le moment. Revenez bientôt !</p>
-  {% endif %}
+  </ul>
 </div>
