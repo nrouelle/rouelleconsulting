@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Equilibre entre freelances et salaries
-date: 2025-10-17
+date: 2025-10-21
 author: Nadège Rouelle - Rouelle Consulting
 ---
 
