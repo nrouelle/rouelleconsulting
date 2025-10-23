@@ -1,22 +1,52 @@
 ---
-layout: default
+layout: blog
 title: Blog
 ---
 
-<div class="home">
-  <h1 class="page-heading">Articles du Blog</h1>
+<!-- Hero Section -->
+<section class="blog-hero">
+  <div class="hero-content">
+    <h1>Blog technique</h1>
+    <p class="hero-description">Mes réflexions sur le développement .NET, l'architecture logicielle et les bonnes pratiques</p>
+  </div>
+</section>
 
-  <ul class="post-list" style="list-style-type: none; padding: 0; margin: 0;">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%d %B %Y" }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h2>
-        {% if post.excerpt %}
-          <p>{{ post.excerpt }}</p>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<!-- Posts Grid -->
+<section class="posts-section">
+  {% if site.posts.size > 0 %}
+    <div class="posts-grid">
+      {% for post in site.posts %}
+        <article class="post-card">
+          <div class="post-card-header">
+            <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%d %B %Y" }}
+            </time>
+            {% if post.categories %}
+              <div class="post-categories">
+                {% for category in post.categories %}
+                  <span class="category-tag">{{ category }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+
+          <h2 class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+
+          {% if post.excerpt %}
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          {% endif %}
+
+          <a href="{{ post.url | relative_url }}" class="read-more">
+            Lire l'article →
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="no-posts">
+      <p>Aucun article pour le moment. Revenez bientôt !</p>
+    </div>
+  {% endif %}
+</section>
