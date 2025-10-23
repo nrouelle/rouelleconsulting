@@ -6,7 +6,7 @@ title: Blog
 <div class="home">
   <h1 class="page-heading">Articles du Blog</h1>
 
-  <ul class="post-list">
+  <ul class="post-list" style="list-style-type: none; padding: 0; margin: 0;">
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%d %B %Y" }}</span>
