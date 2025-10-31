@@ -2,6 +2,7 @@
 title: 5 erreurs courantes avec Blazor
 author: Nadege Rouelle
 date: 2025-10-31
+layout: post
 ---
 # Les 5 erreurs les plus courantes avec Blazor (et comment les éviter)
 
