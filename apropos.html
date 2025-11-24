@@ -22,29 +22,67 @@
     <meta name="description"
         content="Nadège Rouelle, développeuse .NET freelance avec +20 ans d'expérience. Parcours, expertise technique et approche humaine dans le développement d'applications." />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-brand { background-color: #55dde0; }
+        .bg-brand-dark { background-color: #33658A; }
+        .bg-brand-darker { background-color: #2f4858; }
+        .bg-accent { background-color: #f6ae2d; }
+        .bg-accent-warm { background-color: #f26419; }
+        .text-brand { color: #55dde0; }
+        .text-brand-dark { color: #33658A; }
+        .text-brand-darker { color: #2f4858; }
+        .hover\:bg-accent:hover { background-color: #33658A; }
+        .hover\:bg-accent-warm:hover { background-color: #f26419; }
+        .hover\:text-brand:hover { color: #55dde0; }
+        .border-brand { border-color: #55dde0; }
+    </style>
 </head>
 <body class="bg-white text-gray-800 font-sans">
-
-  <!-- Barre de navigation -->
-  <nav class="bg-white border-b border-gray-200 px-6 py-4">
+<!-- Barre de navigation -->
+  <nav class="bg-white border-b border-brand px-6 py-4">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <div class="text-xl font-bold text-blue-700">Rouelle Consulting</div>
-      <div class="space-x-6 text-sm font-medium">
-        <a href="./index.html" class="text-gray-700 hover:text-blue-600">Accueil</a>
-        <a href="./services.html" class="text-gray-700 hover:text-blue-600">Services</a>
-        <a href="./realisations.html" class="text-gray-700 hover:text-blue-600">Réalisations</a>
-        <a href="./apropos.html" class="text-blue-600 hover:text-blue-600">À propos</a>
-        <a href="./blog/" class="text-gray-700 hover:text-blue-600">Blog</a>
-        <a href="./contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
-        <a href="./mentions-legales.html" class="text-gray-700 hover:text-blue-600">Mentions légales</a>
+      <div class="text-xl font-bold text-brand-dark">Rouelle Consulting</div>
+
+      <!-- Menu burger pour mobile -->
+      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Menu desktop -->
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="./index.html" class="text-brand-dark hover:text-brand">Accueil</a>
+        <a href="./services.html" class="text-brand-darker hover:text-brand">Services</a>
+        <a href="./realisations.html" class="text-brand-darker hover:text-brand">Réalisations</a>
+        <a href="./blog/" class="text-brand-darker hover:text-brand">Blog</a>
+        <a href="./apropos.html" class="text-brand-darker hover:text-brand">À propos</a>
+        <a href="./contact.html" class="text-brand-darker hover:text-brand">Contact</a>
       </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+      <a href="./index.html" class="block text-brand-dark hover:text-brand py-2">Accueil</a>
+      <a href="./services.html" class="block text-brand-darker hover:text-brand py-2">Services</a>
+      <a href="./realisations.html" class="block text-brand-darker hover:text-brand py-2">Réalisations</a>
+      <a href="./blog/" class="block text-brand-darker hover:text-brand py-2">Blog</a>
+      <a href="./apropos.html" class="block text-brand-darker hover:text-brand py-2">À propos</a>
+      <a href="./contact.html" class="block text-brand-darker hover:text-brand py-2">Contact</a>
     </div>
   </nav>
 
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      var menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
   <!-- Header -->
-  <header class="bg-gray-100 py-12 px-6 text-center">
-    <h1 class="text-4xl font-bold mb-4">À propos de Nadège Rouelle</h1>
-    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+  <header class="bg-brand-dark py-12 px-6 text-center">
+    <h1 class="text-4xl font-bold mb-4 text-white">À propos de Nadège Rouelle</h1>
+    <p class="text-lg text-white max-w-3xl mx-auto">
       Développeuse .NET freelance passionnée avec plus de 20 ans d'expérience
     </p>
   </header>
@@ -52,10 +90,10 @@
   <!-- Contact -->
     <section class="text-center">
       <div class="space-x-4 mt-4">
-        <a href="https://tally.so/r/3lQ0G6" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+        <a href="https://tally.so/r/3lQ0G6" class="inline-block bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-accent-warm transition">
           Me contacter
         </a>
-        <a href="https://cal.com/rouelleconsulting/30min?overlayCalendar=true" target="_blank" class="inline-block bg-gray-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition">
+        <a href="https://cal.com/rouelleconsulting/30min?overlayCalendar=true" target="_blank" class="inline-block bg-brand-dark text-white px-6 py-3 rounded-full font-semibold hover:bg-accent transition">
           Prendre rendez-vous
         </a>
       </div>
@@ -68,7 +106,7 @@
         <img class="rounded-lg shadow-lg w-full" src="./images/portrait-face.jpg" alt="Nadège Rouelle, développeuse .NET freelance" />
       </div>
       <div class="w-full md:w-1/2">
-        <h2 class="text-2xl font-bold mb-6">Mon parcours</h2>
+        <h2 class="text-2xl font-bold mb-6 text-brand-dark">Mon parcours</h2>
         
         <p class="mb-4 text-gray-700">
           Chaque entreprise fait face à des défis uniques lorsqu'il s'agit de son système informatique. 
@@ -87,8 +125,8 @@
           développer une approche pragmatique et adaptée aux contraintes réelles des entreprises.
         </p>
 
-        <div class="bg-blue-50 p-4 rounded-lg">
-          <h3 class="font-semibold text-blue-700 mb-2">Mes valeurs</h3>
+        <div class="bg-brand p-4 rounded-lg">
+          <h3 class="font-semibold text-brand-darker mb-2">Mes valeurs</h3>
           <ul class="text-sm text-gray-700 space-y-1">
             <li>• <strong>Transparence :</strong> Communication claire sur l'avancement et les défis</li>
             <li>• <strong>Qualité :</strong> Code maintenable et solutions pérennes</li>
@@ -101,10 +139,10 @@
 
     <!-- Expertise technique -->
     <section class="mb-16">
-      <h2 class="text-2xl font-bold mb-6">Expertise technique</h2>
+      <h2 class="text-2xl font-bold mb-6 text-brand-dark">Expertise technique</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
-          <h3 class="text-lg font-semibold mb-4 text-blue-700">Technologies principales</h3>
+          <h3 class="text-lg font-semibold mb-4 text-brand-dark">Technologies principales</h3>
           <ul class="space-y-2 text-gray-700">
             <li>• .NET Core / .NET 5/6/7/8</li>
             <li>• C# (depuis .NET Framework 2.0)</li>
@@ -116,7 +154,7 @@
           </ul>
         </div>
         <div>
-          <h3 class="text-lg font-semibold mb-4 text-blue-700">Environnement de développement</h3>
+          <h3 class="text-lg font-semibold mb-4 text-brand-dark">Environnement de développement</h3>
           <ul class="space-y-2 text-gray-700">
             <li>• SQL Server, PostgreSQL, MySQL</li>
             <li>• Azure DevOps, GitHub Actions</li>
@@ -132,7 +170,7 @@
 
     <!-- Secteurs d'activité -->
     <section class="mb-16">
-      <h2 class="text-2xl font-bold mb-6">Secteurs d'expérience</h2>
+      <h2 class="text-2xl font-bold mb-6 text-brand-dark">Secteurs d'expérience</h2>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="bg-white p-6 border rounded-lg shadow-sm">
           <h3 class="text-lg font-semibold mb-3 text-green-600">🏥 Santé & E-santé</h3>
@@ -151,11 +189,11 @@
 
     <!-- Approche de travail -->
     <section class="mb-16">
-      <h2 class="text-2xl font-bold mb-6">Mon approche</h2>
+      <h2 class="text-2xl font-bold mb-6 text-brand-dark">Mon approche</h2>
       <div class="bg-gray-50 p-8 rounded-lg">
         <div class="grid md:grid-cols-2 gap-8">
           <div>
-            <h3 class="text-lg font-semibold mb-4 text-blue-700">🔧 Pour les projets de maintenance</h3>
+            <h3 class="text-lg font-semibold mb-4 text-brand-dark">🔧 Pour les projets de maintenance</h3>
             <p class="text-gray-700 mb-3">
               J'interviens rapidement pour stabiliser et faire évoluer vos applications existantes.
             </p>
@@ -167,7 +205,7 @@
             </ul>
           </div>
           <div>
-            <h3 class="text-lg font-semibold mb-4 text-blue-700">🚧 Pour les nouveaux projets</h3>
+            <h3 class="text-lg font-semibold mb-4 text-brand-dark">🚧 Pour les nouveaux projets</h3>
             <p class="text-gray-700 mb-3">
               Livraison rapide d'un MVP, puis développement itératif selon vos retours.
             </p>
@@ -182,29 +220,30 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="text-center">
+    
+
+  </section>
+<!-- Contact -->
+    <section class="text-center bg-brand-dark py-16 px-6 text-white ">
       <h2 class="text-2xl font-bold mb-4">Travaillons ensemble</h2>
-      <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
-        Vous avez un projet de développement ou de maintenance d'application .NET ? 
+      <p class="mb-6 max-w-2xl mx-auto">
+        Vous avez un projet de développement ou de maintenance d'application .NET ?
         Discutons de vos besoins et voyons comment je peux vous aider.
       </p>
       <div class="space-x-4">
-        <a href="https://tally.so/r/3lQ0G6" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+        <a href="https://tally.so/r/3lQ0G6" class="inline-block bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-accent-warm transition">
           Me contacter
         </a>
-        <a href="https://cal.com/rouelleconsulting/30min?overlayCalendar=true" target="_blank" class="inline-block bg-gray-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition">
+        <a href="https://cal.com/rouelleconsulting/30min?overlayCalendar=true" target="_blank" class="inline-block bg-brand-dark text-white px-6 py-3 rounded-full font-semibold hover:bg-accent transition">
           Prendre rendez-vous
         </a>
       </div>
     </section>
-
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-6">
-    © 2025 Nadège Rouelle – Développeuse .NET Freelance
-  </footer>
-
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-500 py-6">
+        © 2025 Nadège Rouelle – Développeuse .NET Freelance
+        <p>
+        <a href="./mentions-legales.html" class="text-brand-darker hover:text-brand">Mentions légales</a></p>
+    </footer>
 </body>
 </html>
